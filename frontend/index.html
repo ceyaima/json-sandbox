@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>N-Ary JSON Tree Sandbox</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              // High-Contrast Rosé Pine Palette
+              rp: {
+                base: '#14121d',        // deeper background for better contrast
+                surface: '#1c1a29',     // clean distinct panel surface
+                overlay: '#28253b',     // high-visibility interactive layer
+                muted: '#8e8aa8',       // increased brightness from #6e6a86 for legible subtitles
+                subtle: '#b8b4d0',      // crisp readable secondary labels
+                text: '#fbfafc',        // near-white primary text for high contrast
+                love: '#f0719b',        // punchy rose-red
+                gold: '#ffd17c',        // vibrant warm amber
+                rose: '#f2c1be',        // bright soft rose accent
+                pine: '#4192b3',        // saturated cyan-teal
+                foam: '#a6e1ec',        // crisp bright teal-mint
+                iris: '#d1b8f5',        // vivid lilac
+                highlightLow: '#232034',
+                highlightMed: '#4b4764', // clearer, punchier borders
+                highlightHigh: '#656085',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Rosé Pine Custom Embedded Scrollbars */
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: #4b4764 #1c1a29;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1c1a29;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #4b4764;
+        border-radius: 4px;
+        border: 2px solid #1c1a29;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #656085;
+      }
+      ::-webkit-scrollbar-corner {
+        background: #1c1a29;
+      }
+    </style>
+      </head>
+  <body class="bg-rp-base text-rp-text antialiased overflow-hidden select-none">
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+  <script type="module" src="/index.js"></script></body>
+</html>
